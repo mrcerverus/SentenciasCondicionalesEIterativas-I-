@@ -1,7 +1,11 @@
 """ IMC """
+import sys
+
 """ ingreso de variables """
-peso = float(input("Ingresar el peso en [Kg]: \n"))
-alturaCm = float(input("Ingresar la altura en [Cm]: \n"))
+peso = float(sys.argv[1])
+# float(input("Ingresar el peso en [Kg]: \n"))
+alturaCm = float(sys.argv[2])
+# float(input("Ingresar la altura en [Cm]: \n"))
 
 """ Calculos IMC """
 
