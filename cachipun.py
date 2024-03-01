@@ -18,24 +18,25 @@ while True:
         print('''Argumento inválido: Debe ser ["Piedra" , "Papel" , "Tijera"].''')
         break
     else:
-        """ Evaluación juego """
-        if jugador == computador:
-            resultado = "Empataste"
-        elif jugador == "Piedra" and computador == "Tijera":
-            resultado = "Ganaste"
-        elif jugador == "Piedra" and computador == "Papel":
-            resultado = "Perdiste"
-        elif jugador == "Tijera" and computador == "Piedra":
-            resultado = "Perdiste"
-        elif jugador == "Tijera" and computador == "Papel":
-            resultado = "Ganaste"
-        elif jugador == "Papel" and computador == "Tijera":
-            resultado = "Perdiste"
-        elif jugador == "Papel" and computador == "Piedra":
-            resultado = "Ganaste"
+        break
 
-        """ Resultado en pantalla """
+""" Evaluación juego """
+if jugador == computador:
+    resultado = "Empataste"
+elif (jugador == "Piedra" and computador == "Tijera") or \
+    (jugador == "Tijera" and computador == "Papel") or \
+    (jugador == "Papel" and computador == "Piedra"):
+    resultado = "Ganaste"
+else:
+    resultado = "Perdiste"
+
+""" Resultado en pantalla """
+while True:
+    if jugador not in myList:
+        break
+    else:
         print(f'''
         Tu jugaste {jugador}
         Computador jugó {computador}.
         {resultado}!!''')
+        break
